@@ -15,19 +15,17 @@
  */
 package demo;
 
-import java.security.Principal;
-
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Rob Winch
  */
-@RestController
-public class EchoUserController {
+@Controller
+public class IndexController {
 
 	@RequestMapping("/")
-	public String username(Principal user) {
-		return user.getName();
+	public String username() {
+		return "index";
 	}
 }
